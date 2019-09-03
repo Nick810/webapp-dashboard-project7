@@ -820,10 +820,10 @@ a {
   transform: translateY(-1.375em);
   box-shadow: 0 0.625em 1em 0.0625em rgba(0, 0, 0, 0.29);
 }
-#result button:first-of-type {
+f #result button:first-of-type {
   border-top: none;
 }
-#result button:last-of-type {
+f #result button:last-of-type {
   border-bottom: none;
 }
 
@@ -846,6 +846,11 @@ a {
 .settings-button {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .settings-button {
+    flex-direction: row;
+  }
 }
 
 .switch-light {
@@ -1014,6 +1019,7 @@ a {
 }
 @media (min-width: 1024px) {
   .switch-light strong {
+    margin: 0.625em 0;
     flex: none;
   }
 }
@@ -1073,15 +1079,28 @@ a {
   border-radius: 0.3125em;
   padding: 0.9375em;
 }
+@media (min-width: 1024px) {
+  .button-primary-settings {
+    flex: 1;
+    margin-bottom: 0;
+    margin-right: 0.3125em;
+  }
+}
 .button-disabled {
   font-weight: 600;
   background: #919191;
   color: #fff;
   display: block;
-  width: 100%;
   margin-top: 0.625em;
   border-radius: 0.3125em;
   padding: 0.9375em;
+}
+@media (min-width: 1024px) {
+  .button-disabled {
+    flex: 1;
+    margin-top: 0;
+    margin-left: 0.3125em;
+  }
 }
 
 input[type=search] {
@@ -1133,6 +1152,11 @@ input[type=text]::placeholder {
   border: 0.0625em solid #bec1c3;
   border-radius: 0.3125em;
   margin: 1.25em 0;
+}
+@media (min-width: 1024px) {
+  .form-field {
+    margin-top: 3.75em;
+  }
 }
 
 .switch-light {
